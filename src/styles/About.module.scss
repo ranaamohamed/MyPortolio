@@ -1,0 +1,62 @@
+.about {
+  margin-top: 70px;
+  .intro {
+    padding: var(--space-2xl) 0 var(--space-3xl);
+
+    .intro-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+
+      .section-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        margin-bottom: var(--space-lg);
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-dark)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .intro-text {
+        font-size: var(--font-size-xl);
+        line-height: 1.7;
+        color: var(--text-primary);
+        margin-bottom: var(--space-2xl);
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: var(--space-lg);
+        margin-top: var(--space-xl);
+
+        @media (max-width: 768px) {
+          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+          gap: var(--space-md);
+        }
+      }
+    }
+  }
+
+  .experience.section {
+    background: rgba(var(--bg-secondary), 0.5);
+    padding: var(--space-3xl) 0;
+
+    .timeline {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+
+      @media (max-width: 768px) {
+        padding: 0 var(--space-sm);
+      }
+    }
+  }
+}

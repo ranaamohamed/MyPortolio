@@ -1,0 +1,108 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(var(--bg-primary), 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+
+  &.scrolled {
+    background: rgba(var(--bg-primary), 0.98);
+    box-shadow: var(--shadow-md);
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 var(--space-md);
+  }
+
+  .logo {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+    .logo-text {
+      background: var(--primary-dark);
+      //background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: var(--space-lg);
+    margin: 0;
+    padding: 0;
+
+    li a {
+      color: var(--text-primary);
+      // color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-sm);
+      transition: all var(--transition-fast);
+      position: relative;
+
+      &:hover {
+        color: var(--primary);
+        background: rgba(var(--primary), 0.1);
+      }
+
+      &.active {
+        color: var(--primary);
+        background: rgba(var(--primary), 0.1);
+      }
+    }
+
+    &.open {
+      @media (max-width: 768px) {
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--bg-primary);
+        padding: var(--space-xl);
+        box-shadow: var(--shadow-lg);
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: var(--space-xs);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-sm);
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background: var(--text-primary);
+      transition: all var(--transition-fast);
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  }
+}
