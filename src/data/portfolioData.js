@@ -53,6 +53,14 @@ export const portfolioData = {
       ],
       live: "http://raccoon24.de/",
     },
+    {
+      title: "FROI Website",
+      description:
+        "Developed a modern, responsive corporate website for FROI, showcasing its Future Ready Organization Model, Global Index, Accreditation, Talent Sandbox, research initiatives, and global presence.",
+      tech: "React",
+      github: ["https://github.com/ranaamohamed/froi-website"],
+      live: "https://www.froiglobal.org/",
+    },
   ],
 
   experience: [
